@@ -13,7 +13,8 @@ function App() {
     return (
         <ThemeProvider colorMode="auto">
             <BaseStyles>
-                <Routes>
+                <ColorModeSwitcher />
+                <Routes >
                     <Route path="/" element={<Layout />}>
                         <Route path="/" element={<Home />} />
                         <Route path="About" element={<About />} />
@@ -22,7 +23,6 @@ function App() {
 
                     </Route>
                 </Routes>
-                <ColorModeSwitcher />
             </BaseStyles>
         </ThemeProvider>
     )

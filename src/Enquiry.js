@@ -1,6 +1,6 @@
 
 import * as React from "react";
-import { ThemeProvider, FormGroup, TextInput } from '@primer/components';
+import { Box, ThemeProvider, FormGroup, TextInput } from '@primer/components';
 
 import { useForm } from "react-hook-form";
 import axios from "axios";
@@ -49,30 +49,37 @@ function Enquiry() {
     } = useForm();
 
     return (
-        <ThemeProvider dayScheme="dark_dimmed" nightScheme="dark_dimmed">
-
-            <div>
-                <h2>Enquiry</h2>
-
-                <form onSubmit={(e) => e.preventDefault()}>
-
-                    <label>mid</label>
-                    <input {...register("mid")} defaultValue='mid_wp_001' />
-
-                    <label>apikey</label>
-                    <input {...register("apikey")} defaultValue='6nwFkMCnaGRNwQAtdzBhekbJjlMhmdV4nbBrhWU' />
-
-                    <label>transaction_id</label>
-                    <input {...register("transaction_id")} defaultValue='dev-21110915490914995486437312' />
 
 
-                    <label>secret_key</label>
-                    <input {...register("secret_key")} defaultValue='5JKN1umR9WefrQxfbQLCbWVlx6EHw5gkJlpXod7xJs' />
+        <Box
+            bg="canvas.default"
+            width="100%"
+            minHeight="100vh"
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+            p={5}
+        >
+            <h2>Enquiry</h2>
 
-                    <input type="submit" onClick={handleSubmit(onSubmit)} />
-                </form >
-            </div>
+            <form onSubmit={(e) => e.preventDefault()}>
 
+                <label>mid</label>
+                <input {...register("mid")} defaultValue='mid_wp_001' />
+
+                <label>apikey</label>
+                <input {...register("apikey")} defaultValue='6nwFkMCnaGRNwQAtdzBhekbJjlMhmdV4nbBrhWU' />
+
+                <label>transaction_id</label>
+                <input {...register("transaction_id")} defaultValue='dev-21110915490914995486437312' />
+
+
+                <label>secret_key</label>
+                <input {...register("secret_key")} defaultValue='5JKN1umR9WefrQxfbQLCbWVlx6EHw5gkJlpXod7xJs' />
+
+                <input type="submit" onClick={handleSubmit(onSubmit)} />
+            </form>
             <div>
 
                 <FormGroup>
@@ -86,7 +93,7 @@ function Enquiry() {
                 </FormGroup>
 
             </div>
-        </ThemeProvider>
+        </Box>
     );
 
 

@@ -21,7 +21,6 @@ export default function Layout() {
                 <UnderlineNav.Link as={NavLink} to="about"  >Support</UnderlineNav.Link>
                 <UnderlineNav.Link as={NavLink} to="enquiry "  >Enquiry</UnderlineNav.Link>
                 <UnderlineNav.Link as={NavLink} to="Playground"  >Playground</UnderlineNav.Link>
-                <UnderlineNav.Link as={NavLink} to="Editor"  >Editor</UnderlineNav.Link>
             </UnderlineNav>
 
 

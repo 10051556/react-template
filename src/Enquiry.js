@@ -1,6 +1,5 @@
 
 import * as React from "react";
-import { Box, ThemeProvider, FormGroup, TextInput } from '@primer/components';
 
 import { useForm } from "react-hook-form";
 import axios from "axios";
@@ -51,57 +50,32 @@ function Enquiry() {
     return (
 
 
-        <Box
-            bg="canvas.default"
-            width="100%"
-            minHeight="100vh"
-            display="flex"
-            flexDirection="column"
-            justifyContent="center"
-            alignItems="center"
-            p={5}
-        >
-            <h2>Enquiry</h2>
+        <form onSubmit={(e) => e.preventDefault()}>
 
-            <form onSubmit={(e) => e.preventDefault()}>
+            <label>mid</label>
+            <input {...register("mid")} defaultValue='mid_wp_001' />
 
-                <label>mid</label>
-                <input {...register("mid")} defaultValue='mid_wp_001' />
+            <label>apikey</label>
+            <input {...register("apikey")} defaultValue='6nwFkMCnaGRNwQAtdzBhekbJjlMhmdV4nbBrhWU' />
 
-                <label>apikey</label>
-                <input {...register("apikey")} defaultValue='6nwFkMCnaGRNwQAtdzBhekbJjlMhmdV4nbBrhWU' />
-
-                <label>transaction_id</label>
-                <input {...register("transaction_id")} defaultValue='dev-21110915490914995486437312' />
+            <label>transaction_id</label>
+            <input {...register("transaction_id")} defaultValue='dev-21110915490914995486437312' />
 
 
-                <label>secret_key</label>
-                <input {...register("secret_key")} defaultValue='5JKN1umR9WefrQxfbQLCbWVlx6EHw5gkJlpXod7xJs' />
+            <label>secret_key</label>
+            <input {...register("secret_key")} defaultValue='5JKN1umR9WefrQxfbQLCbWVlx6EHw5gkJlpXod7xJs' />
 
-                <input type="submit" onClick={handleSubmit(onSubmit)} />
-            </form>
-            <div>
+            <input type="submit" onClick={handleSubmit(onSubmit)} />
+        </form>
 
-                <FormGroup>
-                    <FormGroup.Label htmlFor="example-text">Example text</FormGroup.Label>
-                    <TextInput id="example-text" value="Example Value" />
-                </FormGroup>
 
-                <FormGroup>
-                    <FormGroup.Label htmlFor="example-text-b">Example text</FormGroup.Label>
-                    <TextInput id="example-text-b" value="Example Value" />
-                </FormGroup>
 
-            </div>
-        </Box>
-    );
+
+    )
 
 
 }
 
 
-function response() {
 
-
-}
 export default Enquiry

@@ -8,6 +8,7 @@ import Enquiry from './Enquiry'
 import Home from './Home'
 import About from './About'
 import Layout from './Layout'
+import Editor from './Editor'
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
                         <Route path="About" element={<About />} />
                         <Route path="Enquiry" element={<Enquiry />} />
                         <Route path="Playground" element={<Playground />} />
+                        <Route path="Editor" element={<Editor />} />
 
                     </Route>
                 </Routes>
